@@ -70,7 +70,9 @@ These are partitioned in the following Blocks
 | 2a13:fcc0:ebbe:1:401:/80 | Frontend Addresses for Gateways | |
 | 2a13:fcc0:2ed8::/48 | Block for Client Assignments | |
 | 2a13:fcc0:2ed9:ffff::/64 | Anycast IPs for services | |
-| 2a13:fcc0:2f00::/48 | Block for Third Parties | |
+| 2a13:fcc0:2f00::/48 | Client Nets Neanderfunk | |
+| 2a13:fcc0:3000::/48 | Transfer-Net Allocs for third parties | |
+| 2a13:fcc0:3000:300::/64 | Transfer-Net Neanderfunk | |
 
 
 #### Assignments
