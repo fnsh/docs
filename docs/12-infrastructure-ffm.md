@@ -66,7 +66,7 @@ These are partitioned in the following Blocks
 | ----- | ------- | ----- |
 | 194.180.249.0/27 | Frontend Addresses for Gateways | |
 | 194.180.249.32/30 | Anycast IPs for services | |
-| 194.180.249.35/29 | Block for Third Parties |  |
+| 194.180.249.40/29 | Block for Neanderfunk |  |
 | 2a13:fcc0:ebbe:1:401:/80 | Frontend Addresses for Gateways | |
 | 2a13:fcc0:2ed8::/48 | Block for Client Assignments | |
 | 2a13:fcc0:2ed9:ffff::/64 | Anycast IPs for services | |
