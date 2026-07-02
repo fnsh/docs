@@ -46,11 +46,11 @@ The following VLANs are currently in use in Frankfurt:
 | 21 - 21 | Upstream Configo | 217.71.220.138/31 | 2a00:1fe8:1::38/127 | |
 | 21 - 426 | Upstream Inter.Link | 81.27.69.84/31 | 2a11:4140:9002::30/127 | |
 | 31 | Upstream CIX | | | |
-| 110 | Frontend Network for Machines | 194.180.249.0/27 | 2a13:fcc0:ebbe:1:401:/80 | |
+| 110 | Frontend Network for Machines | 194.180.249.0/27 | 2a13:fcc0:ebbe:1:401:1000:110::/112 | |
 | 130 | Mesh Transport | | LL | |
-| 200 | IPMI Management | 172.20.200.0/24 | | |
-| 210 | Hypervisor / VM Management | 172.20.210.0/24 | | |
-| 300 | Neanderfunk Uplink | 172.20.210.0/24 | | |
+| 200 | IPMI Management | 172.20.200.0/24 | fd20:fcc0:ebbe:1:401:1000:200::/112 | |
+| 210 | Hypervisor / VM Management | 172.20.210.0/24 | fd20:fcc0:ebbe:1:401:1000:210::/112 | |
+| 300 | Neanderfunk Uplink | 194.180.249.40/29 | 2a13:fcc0:3000:300::/64  | |
 | 301 | Neanderfunk Cross-GW | | | |
 
 ### IP Addresses
@@ -98,7 +98,7 @@ These are partitioned in the following Blocks
 | 194.180.249.16 | gw07 NAT | |
 | 194.180.249.17 | gw08 | |
 | 194.180.249.18 | gw08 NAT | |
-| 194.180.249.19 | | |
+| 194.180.249.19 | nat64 Gateway | |
 | 194.180.249.20 | | |
 | 194.180.249.21 | | |
 | 194.180.249.22 | | |
@@ -114,6 +114,33 @@ These are partitioned in the following Blocks
 
 ##### VLAN 200 - IPMI Management
 
+| IP-Address | Purpose | Notes |
+| ---------- | ------- | ----- |
+| 172.20.210.1 | gateway via teltonika | Globally routed with nat66 / nat44 |
+| ... | | |
+| 172.20.210.11 | router1 | |
+| ... | | |
+| 172.20.210.19 | nat64 | |
+| ... | | |
+| 172.20.210.21 | gw1 | |
+| 172.20.210.22 | gw2 | |
+| 172.20.210.23 | gw3 | |
+| 172.20.210.24 | gw4 | |
+| 172.20.210.25 | gw5 | |
+| 172.20.210.26 | gw6 | |
+| 172.20.210.27 | gw7 | |
+| 172.20.210.28 | gw8 | |
+| ... | | |
+| 172.20.210.31 | monitoring1 | |
+| ... | | |
+| 172.20.210.111 | proxmox n1c1 | |
+| 172.20.210.112 | proxmox n2c1 | |
+| 172.20.210.113 | proxmox n1c2 | |
+| 172.20.210.114 | proxmox n2c2 | |
+| ... | | |
+| 172.20.210.242 | nixos-installer | This address is not assigned to a specific host, but used in our custom nixos-install image |
+| ... | | |
+
 ##### VLAN 210 - Hypervisor / VM Management
 
 
@@ -123,8 +150,8 @@ These are partitioned in the following Blocks
 
 | MAC Address | Purpose | Notes |
 | ----------- | ------- | ----- |
-| da:ff:<vlan hex>:2<gw id>:00:01 | Gateway MAC Address | <vlan hex> is the VLAN ID in hexadecimal, <gw id> is the Gateway ID (1-4) |
-|  da:ff:<vlan hex>:1<router id>:00:01 | Router MAC Address | <vlan hex> is the VLAN ID in hexadecimal, <router id> is the Router ID (1-4) |
+| `da:ff:<vlan hex>:2<gw id>:00:01` | Gateway MAC Address | `<vlan hex>` is the VLAN ID in hexadecimal, `<gw id>` is the Gateway ID (1-8) |
+| `da:ff:<vlan hex>:1<router id>:00:01` | Router MAC Address | `<vlan hex>` is the VLAN ID in hexadecimal, `<router id>` is the Router ID |
 
 ### Peers
 
