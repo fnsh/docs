@@ -28,11 +28,13 @@ We utilize a Teltonika RUT955 Router for remote access to the infrastructure. It
 | ---------- | --------------- | ----- |
 | 217.71.221.89 | 217.71.221.1 | |
 | 2a00:1fe8:2::89/64 | 2a00:1fe8:2::1 | |
+|  10.170.74.1 | | [1nce](https://portal.1nce.com/portal/customer/sim/4589627270) |
 
 The following Persons are granted access to the infrastructure via the RUT955:
 
  - blocktrron
  - liv
+ - noxnox
 
 The RUT955 is connected to the switch RS232 port to provide access to the console in the ~~unlikely~~ event of expedited configuration changes or troubleshooting.
 
@@ -168,11 +170,15 @@ We currently operate the following Hardware in Frankfurt
 
 ### Servers
 
-- 2x AsRockRack 1U2N2G-AM5/2T
-   - AMD Ryzen 7 9700X
-   - 32GB DDR5
-   - 1TB NVMe
-   - Mellanox ConnectX-4
+- 2x AsRockRack 1U2N2G-AM5/2T (Accounting reference `B26021`)
+   - AMD Ryzen 7 9700X (Accounting reference `B26020a`)
+   - 32GB DDR5 (Accounting reference `B26019b`)
+      - Crucial Pro DDR5 (2x16GB)
+      - Corsair Vengeance DDR5 (2x16GB)
+   - 1TB NVMe M.2 2280
+      - Samsung 990 EVO plus (Accounting reference `B26022`)
+      - Crucial P310 SSD  (Accounting reference `B26018`)
+   - Mellanox ConnectX-4 LX CX4121A (Accounting reference `B26025`)
 
 Each of these chassis contain two nodes, totalling up to 4 systems in Frankfurt.
 
