@@ -58,4 +58,4 @@ jobs:
 
       - name: Deploy to Hetzner
         run: |
-          rsync -e "ssh -i ~/.ssh/id_ed25519 -p 222" -avz --delete site/ bnbhgy@www720.your-server.de:/usr/home/bnbhgy/public_html/docs
+          rsync -e "ssh -i ~/.ssh/id_ed25519 -p 222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" -avz --delete site/ bnbhgy@www720.your-server.de:/usr/home/bnbhgy/public_html/docs
