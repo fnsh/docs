@@ -53,14 +53,8 @@ The following VLANs are currently in use in Frankfurt:
 | 200 | IPMI Management | 172.20.200.0/24 | fd20:fcc0:ebbe:1:401:1000:200::/112 | |
 | 210 | Hypervisor / VM Management | 172.20.210.0/24 | fd20:fcc0:ebbe:1:401:1000:210::/112 | |
 | 300 | Neanderfunk Uplink | 194.180.249.40/29 | 2a13:fcc0:3000:300::/64  | |
-| 301 | Neanderfunk Cross-GW | | | |
 
 ### IP Addresses
-
-We are assigned the following IP address blocks:
-
- - 194.180.249.0/24
- - 2a13:fcc0::/29
 
 These are partitioned in the following Blocks
 
@@ -111,7 +105,7 @@ These are partitioned in the following Blocks
 | 194.180.249.27 | | |
 | 194.180.249.28 | | |
 | 194.180.249.29 | | |
-| 194.180.249.30 | | |
+| 194.180.249.30 | RIPE Atlas node | |
 
 
 ##### VLAN 200 - IPMI Management
@@ -145,15 +139,6 @@ These are partitioned in the following Blocks
 
 ##### VLAN 210 - Hypervisor / VM Management
 
-
-### Mac Addresses
-
-<!-- ToDo: Validate Schema -->
-
-| MAC Address | Purpose | Notes |
-| ----------- | ------- | ----- |
-| `da:ff:<vlan hex>:2<gw id>:00:01` | Gateway MAC Address | `<vlan hex>` is the VLAN ID in hexadecimal, `<gw id>` is the Gateway ID (1-8) |
-| `da:ff:<vlan hex>:1<router id>:00:01` | Router MAC Address | `<vlan hex>` is the VLAN ID in hexadecimal, `<router id>` is the Router ID |
 
 ### Peers
 
@@ -207,5 +192,5 @@ We operate a MikroTik CRS317-1G-16S+RM Switch for interconnecting Servers and Up
 | sfp-sfpplus-13 |  |  |
 | sfp-sfpplus-14 | SFP+ | Connected to Configo |
 | sfp-sfpplus-15 | SFP+ | Prepared for CIX |
-| sfp-sfpplus-16 |  |  |
+| sfp-sfpplus-16 | SFP+ | To be prepared for CIX |
 | ether1 | 1G RJ45 | Connected to RUT955 |

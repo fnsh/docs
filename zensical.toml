@@ -50,7 +50,8 @@ copyright = """
 nav = [
   {"Home" = [
     "index.md",
-    "general/05-about.md"
+    "general/05-about.md",
+    "general/10-getting-started.md"
   ]},
   {
     "Infrastructure" = [
@@ -59,6 +60,7 @@ nav = [
         "infrastructure/20-frankfurt.md",
       ]},
       {"Internet" = [
+        "infrastructure/25-addressing.md",
         "infrastructure/30-ripe.md",
       ]},
       {"Software" = [
