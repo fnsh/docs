@@ -11,30 +11,33 @@
 # The site_name is shown in the page header and the browser window title
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_name
-site_name = "Documentation"
+site_name = "Freie Netze Südhessen - Documentation"
 
 # The site_description is included in the HTML head and should contain a
 # meaningful description of the site content for use by search engines.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_description
-site_description = "A new project generated from the default template project."
+site_description = "Dolumentation um den Freie NEtze Südhessen und zugehörige Infrastruktur"
 
 # The site_author attribute. This is used in the HTML head element.
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_author
-site_author = "<your name here>"
+site_author = "Freie NEtze Südhessen Contributors"
 
 # The site_url is the canonical URL for your site. When building online
 # documentation you should set this.
 # Read more: https://zensical.org/docs/setup/basics/#site_url
-#site_url = "https://www.example.com/"
+site_url = "https://docs.as62028.de/"
+
+# Repository URL for edit feature
+repo_url = "https://github.com/fnsh/docs"
 
 # The copyright notice appears in the page footer and can contain an HTML
 # fragment.
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
 copyright = """
-Copyright &copy; 2026 The authors
+&copy CC-BY-SA-4.0
 """
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
@@ -122,13 +125,13 @@ features = [
     # will generate an edit button for the page. This works for common
     # repository hosting services.
     # https://zensical.org/docs/setup/repository/#content-actions
-    #"content.action.edit",
+    "content.action.edit",
 
     # If you have a repository configured and turn on this feature, Zensical
     # will generate a button that allows the user to view the Markdown
     # code for the current page.
     # https://zensical.org/docs/setup/repository/#content-actions
-    #"content.action.view",
+    "content.action.view",
 
     # Code annotations allow you to add an icon with a tooltip to your
     # code blocks to provide explanations at crucial points.
