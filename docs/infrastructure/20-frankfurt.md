@@ -6,6 +6,23 @@ icon: lucide/building-2
 
 We colocate in Frankfurt at Digital Realty.
 
+## Pictures
+
+<figure markdown="span">
+  ![Front of Rack](/_media/colofra01.jpg)
+  <figcaption>Front of Rack (June 2026)</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Back of Rack](/_media/colofra03.jpg)
+  <figcaption>Back of Rack (June 2026)</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Out of Band](/_media/colofra02.jpg){ width=400px}
+  <figcaption>Out of Band (June 2026)</figcaption>
+</figure>
+
 ## Access
 
 ### Physical
@@ -151,7 +168,7 @@ The following Configuration is active for Peer connections
 
 ## Hardware
 
-We currently operate the following Hardware in Frankfurt
+We currently operate the following Hardware in Frankfurt:
 
 ### Servers
 
