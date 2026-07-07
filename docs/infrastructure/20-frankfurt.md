@@ -1,8 +1,8 @@
 ---
-icon: lucide/server
+icon: lucide/building-2
 ---
 
-# Infrastructure Frankfurt
+# Frankfurt
 
 We colocate in Frankfurt at Digital Realty.
 

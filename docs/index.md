@@ -2,14 +2,12 @@
 icon: lucide/rocket
 ---
 
-# Get started
+# Start
 
 This documentation provides insights into the workings of Freie Netze Südhessen.
 
 The Goal is to collect operational Information as well as organizational matters.
 
-
-# Get involved
 
 ## Communication
 

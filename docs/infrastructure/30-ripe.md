@@ -2,7 +2,7 @@
 icon: lucide/ethernet-port
 ---
 
-# RIPE Infrastructure
+# RIPE
 
 The Freie Netze Südhessen e.V. is a member of the RIPE NCC. We are registered as a Local Internet Registry (LIR) and have been assigned the ASN62028 as well as the IPv4 and IPv6 address blocks.
 

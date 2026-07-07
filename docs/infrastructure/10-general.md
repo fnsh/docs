@@ -2,7 +2,7 @@
 icon: lucide/server
 ---
 
-# Infrastructure
+# General
 
 To operate the network, we obtain numerous infrastructure components.
 

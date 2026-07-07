@@ -47,10 +47,26 @@ copyright = """
 # can be defined using TOML syntax.
 #
 # Read more: https://zensical.org/docs/setup/navigation/
-# nav = [
-#   { "Get started" = "index.md" },
-#   { "Markdown in 5min" = "markdown.md" },
-# ]
+nav = [
+  {"Home" = [
+    "index.md",
+    "general/05-about.md"
+  ]},
+  {
+    "Infrastructure" = [
+      {"Physical" = [
+        "infrastructure/10-general.md",
+        "infrastructure/20-frankfurt.md",
+      ]},
+      {"Internet" = [
+        "infrastructure/30-ripe.md",
+      ]},
+      {"Software" = [
+        "infrastructure/40-nixos.md",
+      ]},
+    ]
+  }
+]
 
 # With the "extra_css" option you can add your own CSS styling to customize
 # your Zensical project according to your needs. You can add any number of
@@ -218,7 +234,7 @@ features = [
     # When tabs are enabled, top-level sections are rendered in a menu layer
     # below the header for viewports above 1220px, but remain as-is on mobile.
     # https://zensical.org/docs/setup/navigation/#navigation-tabs
-    #"navigation.tabs",
+    "navigation.tabs",
 
     # When sticky tabs are enabled, navigation tabs will lock below the header
     # and always remain visible when scrolling down.
