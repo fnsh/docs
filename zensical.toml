@@ -51,7 +51,8 @@ nav = [
   {"Home" = [
     "index.md",
     "general/05-about.md",
-    "general/10-getting-started.md"
+    "general/10-getting-started.md",
+    "general/15-networking.md"
   ]},
   {
     "Infrastructure" = [
