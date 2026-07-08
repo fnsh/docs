@@ -211,3 +211,20 @@ We operate a MikroTik CRS317-1G-16S+RM Switch for interconnecting Servers and Up
 | sfp-sfpplus-15 | SFP+ | Prepared for CIX |
 | sfp-sfpplus-16 | SFP+ | To be prepared for CIX |
 | ether1 | 1G RJ45 | Connected to RUT955 |
+
+
+## Data Flow
+<figure markdown="span">
+  ![Data Flow Diagram](/_media/data-flow.drawio.svg)
+  <figcaption>Data Flow Diagram</figcaption>
+</figure>
+
+Traffic from Inter.Link and Configo both come in over a single cable into our switch, separated into different VLANs by a switch on Configo's side.
+The community IX will hopefully have its own cross connect someday.
+
+`router1` has a virtual function on the Mellanox card that filters for the relevant VLANs.
+Traffic from `router1` to VMs on the same hypervisor is switched directly inside the Mellanox card and never reaches the switch.
+
+??? note "Alternative"
+
+    It is in principle possible to do the routing on the switch. But the switch can hold only a couple of thousand routes, not a full table. Management on the switch is also awkward, so we decided to use dedicated VMs for this task instead.
