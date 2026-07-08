@@ -37,7 +37,7 @@ repo_url = "https://github.com/fnsh/docs"
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
 copyright = """
-&copy CC-BY-SA-4.0
+&copy; CC-BY-SA-4.0 &middot; <a href="/general/90-imprint/">Imprint</a>
 """
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
