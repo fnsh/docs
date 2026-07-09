@@ -11,7 +11,7 @@ The Goal is to collect operational Information as well as organizational matters
 
 ## Communication
 
-We communicate using the Matrix channel `#fnsh:matrix.tu-darmstadt.de`.
+We communicate using the Matrix channel [`#fnsh:matrix.tu-darmstadt.de`](https://matrix.to/#/%23fnsh:matrix.tu-darmstadt.de).
 
 Feel free to join us there and ask any questions you might have.
 

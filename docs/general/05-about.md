@@ -42,7 +42,7 @@ from a technical background.
 We try to do in-person meetings in Darmstadt, Hessen. This currently happens on
 irregular basis. 
 
-For communication we use Matrix. Our public room is `#fnsh:matrix.tu-darmstadt.de`.
+For communication we use Matrix. Our public room is [`#fnsh:matrix.tu-darmstadt.de`](https://matrix.to/#/%23fnsh:matrix.tu-darmstadt.de).
 
 In case you whish to learn more about a specific area or want to be introduced to the group,
 you are welcome to get in contact with someone experienced in this field. Just drop an E-Mail
