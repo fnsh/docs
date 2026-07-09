@@ -177,6 +177,132 @@ and quality of the connection.
 
     The test was performed on a home network with a wireless connection. The RTT may be higher on a wireless connection compared to a wired connection due to potential interference and signal strength issues.
 
+### Internet Connectivity
+
+As a next step, you can also test the connectivity to the Internet by pinging a public DNS server,
+such as Google's DNS server at `8.8.8.8`.
+
+```bash
+$ ping -c 4 8.8.8.8
+```
+
+The output will show the round-trip time for each packet, similar to the previous example with the local network.
+
+As this is a host reachable over the Internet, the round-trip time will be higher than for the local network,
+and may vary depending on the distance and quality of the connection.
+
+!!! tip
+
+    Google DNS server in this example is using a technology called Anycast, which allows multiple
+    servers to share the same IP address. This means that the server you are pinging may not be the
+    same physical server each time, but rather the closest one to your location.
+
+Checking the connectivity to a public DNS server is a good way to verify that your device has access to the Internet.
+
+Being a host on the public internet, a packet has to traverse multiple routers (and possibly other networks) to
+reach the destination. Each router along the path will forward the packet to the next hop until it reaches
+the destination.
+
+You can use the `mtr` utility to trace the route packets take to reach a destination host. The `mtr` command
+combines the functionality of the `traceroute` and `ping` commands, providing a continuous view of the
+route and round-trip times for each hop along the path.
+
+!!! note
+
+    The `mtr` command may require superuser privileges to run. You can use `sudo mtr` to run the command with elevated privileges. (This is usually the case when using MacOS)
+
+!!! attention
+
+    The `mtr` command provides a continuous view of the route and round-trip times for each hop along the path to the destination. You can use the `q` key to quit the command and return to the command prompt.
+
+
+```bash
+$ mtr 8.8.8.8
+
+                                       My traceroute  [v0.96]
+dbauer-x13g2 (192.168.77.43) -> 8.8.8.8 (8.8.8.8)                           2026-07-09T21:53:19+0200
+Keys:  Help   Display mode   Restart statistics   Order of fields   quit
+                                                            Packets               Pings
+ Host                                                     Loss%   Snt   Last   Avg  Best  Wrst StDev
+ 1. _gateway                                               0.0%    24    2.8   2.5   2.1   3.2   0.3
+ 2. 217.71.219.173                                         0.0%    24    2.6   3.8   2.6  25.1   4.5
+ 3. xe-2-0-2-81.core1.ix.ffm.configo.net                   0.0%    24   20.1   4.4   2.9  20.1   3.5
+ 4. 217.71.216.70                                          0.0%    24    3.6   4.6   3.1  21.8   3.9
+ 5. 100.et14.r1-fra1-de.as5405.net                         0.0%    24    3.4   3.5   3.1   4.9   0.5
+ 6. r5-fra1-de.as5405.net                                  0.0%    23    3.7   3.8   3.2   7.6   0.9
+ 7. r7-fra1-de.as5405.net                                  0.0%    23    3.4   3.6   3.2   6.6   0.7
+ 8. r4-fra1-de.as5405.net                                  0.0%    23    3.6   3.5   2.6   4.7   0.4
+ 9. 142.251.200.164                                        0.0%    23    3.8   4.0   3.5   5.0   0.4
+10. 72.14.239.217                                          0.0%    23    3.6   3.6   3.2   4.4   0.3
+11. 142.250.46.245                                         0.0%    23    4.7   4.6   3.3   9.4   1.1
+12. dns.google                                             0.0%    23    3.8   3.9   3.5   5.1   0.4
+```
+
+In the output, you can see the following information for each hop along the path to the destination:
+
+ - Host: The hostname or IP address of the router at that hop.
+ - Loss%: The percentage of packets lost at that hop.
+ - Snt: The number of packets sent to that hop.
+ - Last: The round-trip time for the last packet sent to that hop.
+ - Avg: The average round-trip time for all packets sent to that hop.
+ - Best: The best (lowest) round-trip time for all packets sent to that hop.
+ - Wrst: The worst (highest) round-trip time for all packets sent to that hop.
+ - StDev: The standard deviation of the round-trip times for all packets sent to that hop.
+
+!!! note
+
+    As a routers primary function is to forward packets, it may not prioritize responding to ICMP Echo Request packets.
+    This can result in higher round-trip times or packet loss for some hops, even if the overall connection to the
+    destination is stable.
+
+An important consideration to be taken into account is that it only shows the route taken by packets to reach
+the destination, but it does not provide information about the route taken by packets on the return path.
+The return path may be different due to routing policies and network conditions.
+
+This applies to each hop along the path to the destination. As each port sends the packet back on the route
+it considers best, the return path may be different for each hop along the path.
+
+This is visible in case the latency of hops along the path is significantly different from
+the latency of the destination.
+
+Consider the following case:
+
+![Traffic Map](/_media/mtr-map.svg)
+
+```bash
+$ mtr 8.8.8.8
+
+                                       My traceroute  [v0.96]
+core1.dar.as4242.net  -> core4.ber.as4242.net                               2026-07-09T21:53:19+0200
+Keys:  Help   Display mode   Restart statistics   Order of fields   quit
+                                                            Packets               Pings
+ Host                                                     Loss%   Snt   Last   Avg  Best  Wrst StDev
+ 1. core1.dar.as4242.net                                   0.0%    24    0.4   0.3   0.1   1.1   0.3
+ 2. core2.fra.as4242.net                                   0.0%    24    0.8   0.7   0.5   1.2   0.2
+ 3. core3.dus.as4242.net                                   0.0%    24    9.1   8.9   8.8   9.1   0.1
+ 4. core6.ham.as4242.net                                   0.0%    24    8.8   8.9   8.7   9.1   0.1
+ 5. core4.ber.as4242.net                                   0.0%    24   10.1  10.0   9.9  10.1   0.1
+```
+
+The return-path is not visible in the output. The latency of hop `core6.ham.as4242.net` is slightly
+lower than the latency of hop `core3.dus.as4242.net`, which indicates that the return
+path from `core6.ham.as4242.net` to the source is different from the return path from
+`core3.dus.as4242.net` to the source.
+
+This is also visible in the path graph, as the return path of `core3.dus.as4242.net` is
+traversing `core5.ams.as4242.net`. This is not visible in the traceroute output, as only the
+forward path is shown.
+
+
+!!! tip
+
+    Traffic is often routed through the "cheapest" path, which may not be the most direct path. This can result in higher latency and packet loss for some hops along the path, even if the overall connection to the destination is stable.
+
+You can often also extract information about the Network from such a trace, as the hostnames of routers often contain
+information about the location and network of the router. Refer to this
+[presentation](https://archive.nanog.org/sites/default/files/10_Roisman_Traceroute.pdf)
+for more information about the naming conventions used in hostnames of routers.
+
 
 ## Protocols
 
