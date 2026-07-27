@@ -81,6 +81,7 @@ These are partitioned in the following Blocks
 | 194.180.249.32/30 | Anycast IPs for services | |
 | 194.180.249.36/30 | Loopback IPs |
 | 194.180.249.40/29 | Block for Neanderfunk |  |
+| 2a13:fcc0:1007::/112 | Loopback Addresses | |
 | 2a13:fcc0:ebbe:1:401:/80 | Frontend Addresses for Gateways | |
 | 2a13:fcc0:2ed8::/48 | Block for Client Assignments | |
 | 2a13:fcc0:2ed9:ffff::/64 | Anycast IPs for services | |
@@ -90,6 +91,15 @@ These are partitioned in the following Blocks
 
 
 #### Assignments
+
+##### Loopback Addresses
+
+| IPv4 | IPv6 | Purpose | Notes |
+| ---- | ---- | ------- | ----- |
+| 194.180.249.36 | 2a13:fcc0:1007::36 | router1 | |
+| 194.180.249.37 | 2a13:fcc0:1007::37 | | |
+| 194.180.249.38 | 2a13:fcc0:1007::38 | | |
+| 194.180.249.39 | 2a13:fcc0:1007::39 | | |
 
 ##### VLAN 110 - Frontend Network for Machines
 
