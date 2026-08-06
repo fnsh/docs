@@ -10,7 +10,7 @@ We colocate in Frankfurt at Digital Realty.
 
 <figure markdown="span">
   ![Front of Rack](/_media/colofra01.jpg)
-  <figcaption>Front of Rack (June 2026)</figcaption>
+  <figcaption>Front of Rack (August 2026)</figcaption>
 </figure>
 
 <figure markdown="span">
