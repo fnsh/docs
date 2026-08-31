@@ -183,7 +183,7 @@ We currently operate the following Hardware in Frankfurt:
 
 ### Servers
 
-- 2x AsRockRack 1U2N2G-AM5/2T (Accounting reference `B26021`)
+- 2x AsRockRack [1U2N2G-AM5/2T](https://www.asrockrack.com/general/productdetail.asp?Model=1U2N2G-AM5/2T#Manual) (Accounting reference `B26021`)
    - AMD Ryzen 7 9700X (Accounting reference `B26020a`)
    - 32GB DDR5 (Accounting reference `B26019b`)
       - Crucial Pro DDR5 (2x16GB)
@@ -191,7 +191,7 @@ We currently operate the following Hardware in Frankfurt:
    - 1TB NVMe M.2 2280
       - Samsung 990 EVO plus (Accounting reference `B26022`)
       - Crucial P310 SSD  (Accounting reference `B26018`)
-   - Mellanox ConnectX-4 LX CX4121A (Accounting reference `B26025`)
+   - Mellanox ConnectX-4 LX [CX4121A-ACAT](https://network.nvidia.com/files/doc-2020/pb-connectx-4-lx-en-card.pdf) (Accounting reference `B26025`)
 
 Each of these chassis contain two nodes, totalling up to 4 systems in Frankfurt.
 
