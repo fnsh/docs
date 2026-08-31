@@ -219,8 +219,8 @@ We operate a MikroTik CRS317-1G-16S+RM Switch for interconnecting Servers and Up
 | sfp-sfpplus-12 |  |  |
 | sfp-sfpplus-13 |  |  |
 | sfp-sfpplus-14 | SFP+ | Connected to Configo |
-| sfp-sfpplus-15 | SFP+ | Prepared for CIX |
-| sfp-sfpplus-16 | SFP+ | To be prepared for CIX |
+| sfp-sfpplus-15 | SFP+ | Connected to CIX |
+| sfp-sfpplus-16 | SFP+ | Connected to CIX |
 | ether1 | 1G RJ45 | Connected to RUT955 |
 
 
