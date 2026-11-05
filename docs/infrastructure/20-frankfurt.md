@@ -167,16 +167,6 @@ These are partitioned in the following Blocks
 
 ##### VLAN 210 - Hypervisor / VM Management
 
-
-### Peers
-
-The following Configuration is active for Peer connections
-
-| Peer | Remote AS | Remote IPv4 | Local IPv4 | Remote IPv6 | Local IPv6 | Description |
-| ---- | --------- | ----------- | ---------- | ----------- | ---------- | ----------- |
-| Inter.Link | 5405 | 81.27.69.84 | 81.27.69.85 | 2a11:4140:9002::30 | 2a11:4140:9002::31 | Peer with Inter.Link |
-| Configo | 34154 | 217.71.220.138 | 217.71.220.139 | 2a00:1fe8:1::38 | 2a00:1fe8:1::39 | Peer with Configo |
-
 ## Hardware
 
 We currently operate the following Hardware in Frankfurt:

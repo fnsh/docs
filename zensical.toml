@@ -76,6 +76,7 @@ nav = [
       ]},
       {"Internet" = [
         "infrastructure/25-addressing.md",
+        "infrastructure/27-peering.md",
         "infrastructure/30-ripe.md",
       ]},
       {"Software" = [
