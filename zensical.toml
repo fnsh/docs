@@ -55,6 +55,20 @@ nav = [
     "general/15-networking.md"
   ]},
   {
+    "Firmware" = [
+      {
+        "Build" = [
+          "firmware/10-build.md"
+        ]
+      },
+      {
+        "Packages" = [
+          "firmware/50-fssrl.md"
+        ]
+      }
+    ]
+  },
+  {
     "Infrastructure" = [
       {"Physical" = [
         "infrastructure/10-general.md",
