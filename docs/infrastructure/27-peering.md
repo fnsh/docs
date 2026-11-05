@@ -19,3 +19,5 @@ The following Configuration is active for Peer connections
 | Freifunk Frankfurt | 57555     | 185.1.74.40    | 185.1.74.74    | 2001:7f8:a5::6:4475:1 | 2001:7f8:a5::6:2028:1 | Peer with Freifunk Frankfurt | XC Community-IX |
 
 
+!!! note
+    The configured peers can also be viewed in the bird config contained in our [GitHub repository](https://github.com/fnsh/nixos-config/blob/main/machines/router1/bird.conf).
